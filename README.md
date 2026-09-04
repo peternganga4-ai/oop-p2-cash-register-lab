@@ -1,5 +1,54 @@
 # Object Oriented Programming (OOP) Part 2 - Cash Register Lab
 
+
+## Cash Register Application
+
+This project is a Python object-oriented programming exercise that models a simple cash register for an e-commerce application.
+
+### Features
+
+The `CashRegister` class supports:
+
+* **Adding items** — Adds an item, price, and quantity to the register.
+* **Tracking the total** — Calculates the total cost of all items added.
+* **Tracking items** — Stores each item in the register, including multiple quantities.
+* **Transaction history** — Keeps a record of previous transactions.
+* **Applying discounts** — Applies a percentage discount between 0% and 100% to the total.
+* **Discount validation** — Rejects discounts that are not integers or are outside the 0–100 range.
+* **Voiding transactions** — Removes the most recent transaction and updates the total and items.
+* **Transaction validation** — Displays a message when there is no transaction available to void.
+
+### Technologies Used
+
+* Python 3
+* Object-Oriented Programming (OOP)
+* Pytest
+* Git and GitHub
+
+### Testing
+
+The application has been tested using Pytest. The test suite currently passes all **14 tests**.
+
+To run the tests:
+
+```bash
+pytest
+```
+
+### Project Structure
+
+```text
+oop-p2-cash-register-lab/
+├── lib/
+│   ├── cash_register.py
+│   └── testing/
+│       └── cash_register_test.py
+├── README.md
+├── Pipfile
+├── Pipfile.lock
+└── pytest.ini
+```
+
 Now that we’ve discussed more about object oriented design philosophies and techniques like decorators we will be looking at building more complex objects. In this case we will be building a cash register object to simulate different functions of a cash register for an e-commerce site. 
 
 ## Tools & Resources

@@ -3,10 +3,24 @@
 class CashRegister:
 
     def __init__(self, discount=0):
-        self.discount = discount = discount
+        self.discount = discount
         self.total = 0
         self.items = []
         self.previous_transactions = []
+
+    @property
+    def discount(self):
+         return self._discount
+
+    
+    @discount.setter
+    def discount(self, value):
+         if isinstance(value, int) and 0 <= value <= 100:
+              self._discount = value
+         else:
+              print("Not valid discount")
+
+
 
 
     def add_item(self, item, price, quantity=1):
@@ -43,6 +57,9 @@ class CashRegister:
 #remove the items from the the total
               for _ in range(quantity):
                    self.items.pop()
+              else:
+                   print("There is no transaction to void.")
+                   
 
                    
                
